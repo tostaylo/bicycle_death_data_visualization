@@ -2,7 +2,46 @@ body {
 text-align: center
 }
 
+#title-div{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 300px;
+}
 
+#title-div p{
+    font-size: 2em;
+    margin: 0;
+    }
+
+#legend-div {
+    width: 320px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+.wrapper{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    text-align: center;
+}
+.colors{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+#highest{
+    background:navy;
+}
+
+#lowest{
+    background: purple;
+}
 
 .state-borders {
   fill: none;
@@ -16,4 +55,7 @@ text-align: center
 .tooltip {
 background: black;
 color: white;
+border-radius: 4px;
+padding: 10px;
+text-align: center;
 }

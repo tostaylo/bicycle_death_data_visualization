@@ -9,8 +9,20 @@
     <title>Bicycle Data Visualizaton</title>
 </head>
 <body>
+<div id="title-div"><p>Deadliest States for Cyclists</p></div>
+<div id="legend-div">
+    <div class="wrapper">
+        <div class="colors-title">Highest Fatalities Per Capita</div>
+        <div class="colors" id="highest"></div>
+    </div>
+    <div class="wrapper">
+    <div class="colors-title">Lowest Fatalities Per Capita</div>
+    <div class="colors" id="lowest"></div>
+    </div>
+</div>
 
 <svg></svg>
+<div id=" source"><p>Source: Governing calculations of NHTSA Fatality Analysis Reporting System data 2012</p></div>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="app.js"></script>
