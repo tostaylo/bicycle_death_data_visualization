@@ -11,3 +11,9 @@ text-align: center
   stroke-linecap: round;
   pointer-events: none;
 }
+
+
+.tooltip {
+background: red;
+color: white;
+}

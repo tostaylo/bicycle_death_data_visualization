@@ -23,6 +23,9 @@ print(rank_state_death_lst)
 
 
 with open('web_scrape.csv', 'w') as csvfile:
+    dict_writer = csv.DictWriter(csvfile, fieldnames=["rank", "state", "total"], delimiter=',')
+    dict_writer.writeheader()
     writer = csv.writer(csvfile, delimiter=",")
+
     for state in rank_state_death_lst:
         writer.writerow(state)
