@@ -5,14 +5,18 @@ var svg = d3.select('svg')
             .attr('width', width)
             .attr('height', height);
 
+var colorScale = d3.scaleLinear()
+                   .domain([0, 120])
+                   .range(['purple', 'navy']);
+
 
 var tooltip = d3.select("body")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity",0)
-                .style("position","absolute")
-                .text("hello");
-                ;
+                .style("position","absolute");
+
+
 
 var projection = d3.geoAlbersUsa()
 				   .translate([width/2, height/2])    // translate to center of screen
@@ -36,24 +40,32 @@ d3.csv("/web_scrape.csv", function(data) {
   for(var i = 0; i < stateData.length; i++){
     for (var j = 0; j < csvData.length; j++){
           if(stateData[i].properties.name === csvData[j].state){
-             console.log('its a match');
+             stateData[i]['rank'] = parseInt(csvData[j].rank)
+             stateData[i]['total'] = parseInt(csvData[j].total)
           }
        }
     }
 
+console.log(stateData);
 
   svg.append("g")
         .attr("class", "states")
-        .attr("stroke", 'red')
-        .attr("fill", "white")
         .selectAll("path")
         .data(us.features)
         .enter()
         .append("path")
         .attr("d", path)
+        .attr('fill', d => colorScale(d.total))
         .on("mouseover", function(d) {
-         tooltip.style("opacity", 1)
-    });
+            console.log(d.properties.name);
+            tooltip.style("opacity", 1)
+            .style("left", d3.event.pageX + "px")
+            .style("top", d3.event.pageY + "px")
+            .text(d.properties.name)
+         .on("mouseout", function(d) {
+        tooltip.style("opacity", 0);
+  });
+     });
 
 });
 
