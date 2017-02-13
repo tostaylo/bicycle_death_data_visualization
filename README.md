@@ -7,21 +7,22 @@ The project displays a color coded map of the United States.  If you hover over 
 
 #Prerequisites
 
-import requests
-import bs4
-import csv
+*python3
+*import requests
+*import bs4
+*import csv
 
 
 #Built With
 
-D3 - Data Visualization 
-JQuery - Javascript Library
-Beautiful Soup - Web Scraping
-Python
-Javascript
-HTML
-CSS
-CSV
+*D3 - Data Visualization 
+*JQuery - Javascript Library
+*Beautiful Soup - Web Scraping
+*Python
+*Javascript
+*HTML
+*CSS
+*CSV
 
 
 
