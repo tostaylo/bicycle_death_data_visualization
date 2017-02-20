@@ -5,12 +5,7 @@ This project was built using statistics from http://www.governing.com/gov-data/t
 The project displays a color coded map of the United States.  If you hover over a state a display div will provide you with it's bicycle fatality ranking, total fatalities and per capita fatality rate.  
 
 
-#Prerequisites
 
-* python3
-* import requests
-* import bs4
-* import csv
 
 
 #Built With
