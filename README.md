@@ -1,4 +1,4 @@
-#Bicycle Death Data Visualization
+<h1>Bicycle Death Data Visualization</h1>
 
 This project was built using statistics from http://www.governing.com/gov-data/transportation-infrastructure/most-bicycle-cyclist-deaths-per-capita-by-state-data.html
 
@@ -8,7 +8,7 @@ The project displays a color coded map of the United States.  If you hover over 
 
 
 
-#Built With
+<h2>Built With</h2>
 
 * D3 - Data Visualization 
 * JQuery - Javascript Library
